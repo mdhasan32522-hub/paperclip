@@ -1,0 +1,17 @@
+schema: paperclip/v1
+routines:
+  pipeline-heartbeat:
+    triggers:
+      - kind: schedule
+        cronExpression: "*/15 7-22 * * *"
+        timezone: America/New_York
+  reply-sweep:
+    triggers:
+      - kind: schedule
+        cronExpression: "5,35 7-22 * * *"
+        timezone: America/New_York
+  weekly-pipeline-review:
+    triggers:
+      - kind: schedule
+        cronExpression: "0 9 * * 1"
+        timezone: America/New_York
